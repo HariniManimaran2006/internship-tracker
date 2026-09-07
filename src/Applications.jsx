@@ -52,7 +52,7 @@ const Applications = () => {
   // Fetch live applications from Node.js backend
   const fetchApplications = async () => {
     try {
-      const res = await fetch(`${API_BASE}/applications`);
+      const res = await fetch(`${API_BASE}/api/applications`);
       const data = await res.json();
       
       const formatted = data.map(item => ({

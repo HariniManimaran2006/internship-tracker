@@ -45,7 +45,7 @@ const ManageStudents = () => {
 
   const fetchStudents = async () => {
     try {
-      const res = await fetch(`${API_BASE}/students`);
+      const res = await fetch(`${API_BASE}/api/students`);
       const data = await res.json();
       setStudents(data);
     } catch (err) {

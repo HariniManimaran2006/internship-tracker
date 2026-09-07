@@ -53,7 +53,7 @@ const Internship = () => {
       }
     }
 
-    fetch(`${API_BASE}/internships`)
+    fetch(`${API_BASE}/api/internships`)
       .then(res => res.json())
       .then(data => {
         setInternshipsData(data);

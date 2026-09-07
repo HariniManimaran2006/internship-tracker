@@ -51,13 +51,13 @@ const Dashboard = () => {
       setErrorMsg('');
       try {
         // Fetching apps and internships independently to prevent a single missing endpoint from failing the whole dashboard
-        const appsRes = await fetch(`${API_BASE}/applications`);
-        const internshipsRes = await fetch(`${API_BASE}/internships`);
+        const appsRes = await fetch(`${API_BASE}/api/applications`);
+        const internshipsRes = await fetch(`${API_BASE}/api/internships`);
         
         // Notifications is optional for now if the table doesn't exist yet
         let notifsData = [];
         try {
-          const notifsRes = await fetch(`${API_BASE}/notifications`);
+          const notifsRes = await fetch(`${API_BASE}/api/notifications`);
           if (notifsRes.ok) {
             notifsData = await notifsRes.json();
           }

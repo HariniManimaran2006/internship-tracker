@@ -45,9 +45,9 @@ const AdminDashboard = () => {
     const fetchAdminData = async () => {
       try {
         const [studentsRes, internshipsRes, appsRes] = await Promise.all([
-          fetch(`${API_BASE}/students`),
-          fetch(`${API_BASE}/internships`),
-          fetch(`${API_BASE}/applications`)
+          fetch(`${API_BASE}/api/students`),
+          fetch(`${API_BASE}/api/internships`),
+          fetch(`${API_BASE}/api/applications`)
         ]);
         
         const studentsData = await studentsRes.json();

@@ -44,7 +44,7 @@ const ManageApplications = () => {
   }, [navigate]);
 
   const fetchApplications = () => {
-    fetch(`${API_BASE}/applications`)
+    fetch(`${API_BASE}/api/applications`)
       .then(res => res.json())
       .then(data => setApplications(data))
       .catch(err => console.error('Error fetching admin applications:', err));

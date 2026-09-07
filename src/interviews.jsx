@@ -73,7 +73,7 @@ const Interviews = () => {
 
   const fetchNotificationsCount = async () => {
     try {
-      const res = await fetch(`${API_BASE}/notifications`);
+      const res = await fetch(`${API_BASE}/api/notifications`);
       const data = await res.json();
       if (Array.isArray(data)) {
         const unread = data.filter(n => n.unread).length;

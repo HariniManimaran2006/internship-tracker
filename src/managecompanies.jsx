@@ -46,7 +46,7 @@ const ManageCompanies = () => {
   }, [navigate]);
 
   const fetchCompanies = () => {
-    fetch(`${API_BASE}/companies`)
+    fetch(`${API_BASE}/api/companies`)
       .then(res => res.json())
       .then(data => setCompanies(data))
       .catch(err => console.error('Error loading companies:', err));

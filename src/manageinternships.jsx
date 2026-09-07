@@ -64,7 +64,7 @@ const ManageInternships = () => {
   // Fetch internships from database
   const fetchInternships = async () => {
     try {
-      const res = await fetch(`${API_BASE}/internships`);
+      const res = await fetch(`${API_BASE}/api/internships`);
       const data = await res.json();
       setInternships(data);
     } catch (err) {
