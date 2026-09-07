@@ -82,7 +82,7 @@ const Documents = () => {
     setLoading(true);
     setErrorMsg('');
     try {
-      const res = await fetch(`${API_BASE}/documents?user_id=${userId}`);
+      const res = await fetch(`${API_BASE}/api/documents?user_id=${userId}`);
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to load documents.');
       setDocuments(data);
